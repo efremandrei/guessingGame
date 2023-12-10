@@ -30,8 +30,8 @@ while playAgain:
     score = 0
     startTime = 0
     print("To exit the game mid-game, enter 'exit' instead of a character")
+    startTime = time.time()
     while '_' in oneStringUnderscores:
-        startTime = time.time()
         guess = input(f'The expression is "{oneStringUnderscores}", please guess a character! \n')
         #to exit game mid-game
         if guess == 'exit':
@@ -79,4 +79,5 @@ while playAgain:
         elif playAgain == 'Y':
             playAgain = True
             print("Ok, so we're playing another round!\n")
+            startTime = time.time()
             break
